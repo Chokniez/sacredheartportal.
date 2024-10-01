@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Sacred Heart Academy of Novaliches</title>
+    <link rel="icon" href="https://sacredheartportal.edu.ph/favicon.ico" type="image/x-icon"> <!-- Example favicon -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #006400; /* Dark green color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 150px; /* Adjust the logo size as needed */
+        }
+        .container {
+            max-width: 1200px; /* Set max width for the container */
+            margin: 20px auto; /* Center the container */
+            padding: 20px; /* Maintain padding for content */
+            background-color: white; /* White background for the container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        h2 {
+            border-bottom: 2px solid #006400; /* Dark green color */
+            padding-bottom: 10px;
+            color: #006400; /* Dark green for headers */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .section {
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none; /* Hide the content by default */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #006400;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i0.wp.com/shan.edu.ph/wp-content/uploads/2022/04/sacred-heart-academy-green-logo.png?resize=1536%2C1518&ssl=1" alt="Sacred Heart Academy Logo" class="logo">
+        <h1>Sacred Heart Academy of Novaliches</h1>
+        <h2>Student Portal</h2>
+        <a href="https://sacredheartportal.edu.ph" style="color: white; text-decoration: none;">Visit Our Portal</a> <!-- Example link to the portal -->
+    </header>
+
+    <div class="container">
+        <!-- Student Profile Section -->
+        <h2 onclick="toggleSection('studentProfileContent')">Student Profile</h2>
+        <div id="studentProfileContent" class="section">
+            <ul>
+                <li>ID: <span id="student-id"></span></li>
+                <li>LRN: <span id="student-lrn"></span></li>
+            </ul>
+        </div>
+
+        <!-- Grades Section -->
+        <h2 onclick="toggleSection('gradesContent')">Grades</h2>
+        <div id="gradesContent" class="section">
+            <ul>
+                <li>1st Quarter: <span id="student-grade-1"></span></li>
+                <li>2nd Quarter: <span id="student-grade-2"></span></li>
+                <li>3rd Quarter: <span id="student-grade-3"></span></li>
+                <li>4th Quarter: <span id="student-grade-4"></span></li>
+            </ul>
+        </div>
+
+        <!-- Student Record Section -->
+        <h2 onclick="toggleSection('studentRecordContent')">Student Record</h2>
+        <div id="studentRecordContent" class="section">
+            <ul>
+                <li>Violations: <span id="student-violations"></span></li>
+                <li>Late/Absents: <span id="student-lates-absents"></span></li>
+                <li>Medical Record: <span id="student-medical-record"></span></li>
+            </ul>
+        </div>
+
+        <!-- Announcements Section -->
+        <h2 onclick="toggleSection('announcementsContent')">Announcements</h2>
+        <div id="announcementsContent" class="section">
+            <ul>
+                <li>Programs: <span id="student-programs"></span></li>
+                <li>Fees: <span id="student-fees"></span></li>
+                <li>Guidance: <span id="student-guidance"></span></li>
+            </ul>
+        </div>
+
+        <!-- Learning Materials Section -->
+        <h2 onclick="toggleSection('learningMaterialsContent')">Learning Materials</h2>
+        <div id="learningMaterialsContent" class="section">
+            <ul>
+                <li>Materials: <span id="student-materials"></span></li>
+            </ul>
+        </div>
+
+        <!-- Tutorial Section -->
+        <h2 onclick="toggleSection('tutorialContent')">Tutorial</h2>
+        <div id="tutorialContent" class="section">
+            <ul>
+                <li>Resources: <span id="student-tutorials"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sacred Heart Academy of Novaliches. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block'; // Show the content
+            } else {
+                section.style.display = 'none'; // Hide the content
+            }
+        }
+    </script>
+
+</body>
+</html>
